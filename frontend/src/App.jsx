@@ -15,7 +15,7 @@ function App() {
   const [users, setUsers] = useState([]);
   const { setIsEnable, privacy, isSent, setIsSent } = useAppContext();
   const joinRoom = async (user, userWant, userIs) => {
-    let con = io("http://localhost:5000", {
+    let con = io("https://moodmate.onrender.com", {
       transports: ["websocket"],
     });
     setConnection(con);
